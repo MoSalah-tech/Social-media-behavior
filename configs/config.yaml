@@ -1,0 +1,36 @@
+project:
+  name: influencer-detection
+  random_state: 42
+
+data:
+  raw_path: data/raw/social_media_user_behavior.csv
+  target: influencer_status
+  drop_columns:
+    - user_id
+  date_column: account_join_date
+
+split:
+  test_size: 0.2
+  val_size: 0.1
+
+model:
+  params:
+    device: cpu
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.002
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_alpha: 0.0
+    reg_lambda: 1.0
+    tree_method: hist
+    n_jobs: -1
+
+training:
+  cv_folds: 5
+  scoring: f1
+
+paths:
+  model_dir: models
+  figures_dir: reports/figures
+  mlflow_dir: mlruns
