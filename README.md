@@ -51,7 +51,7 @@ The final deliverable is not a "successful model." It is a **working pipeline pl
 | Train | `src/models/train.py` | Stratified splits, 5-fold CV, MLflow logging, XGBoost |
 | Evaluate | `src/models/evaluate.py` | Confusion matrix, ROC, PR, feature importance |
 | Predict | `src/models/predict.py` | Inference on new inputs with defaults |
-| Serve | `src/serving/api.py` | FastAPI endpoint |
+| Serve | `src/service/api.py` | FastAPI endpoint |
 
 The pipeline **auto-detects** binary vs multi-class and configures XGBoost accordingly. Changing the target requires editing one line in `configs/config.yaml` — no code changes.
 
