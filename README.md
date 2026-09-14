@@ -100,6 +100,10 @@ CV F1:        0.9951 ± 0.0098
 Test F1:      0.9589
 Test ROC AUC: 1.0000
 ```
+### MLflow UI
+```shell
+mlflow ui --backend-store-uri mlruns
+```
 
 Diagnostic (notebooks/03_diagnose_perfect.py):
 
